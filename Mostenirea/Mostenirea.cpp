@@ -19,6 +19,8 @@ public:
     {
         std::cout << "Vehiculul a pornit " << std::endl;
     }
+protected:
+    int numar_roti;
 };
 
 //class Derivata: tip_mostenire clasa_de_baza
@@ -28,6 +30,7 @@ public:
     Automobil()
     {
         std::cout << "Un automobil a fost creat\n";
+        numar_roti = 4;
     }
     ~Automobil()
     {
@@ -36,6 +39,10 @@ public:
     void claxoneaza()
     {
         std::cout << "Beep Beep! " << std::endl;
+    }
+    void printNumarRoti()
+    {
+        std::cout << "Numarul de roti este " << numar_roti << std::endl;
     }
 };
 
@@ -46,5 +53,9 @@ int main()
     bmw.marca = "Bmw";//atribut din clasa vehicul
     bmw.porneste();//metoda din clasa vehicul
     bmw.claxoneaza();//metoda din clasa automobil
+    //bmw.numar_roti // error este protected
+    //Vehicul v;
+    //v.numar_roti // error este protected
+
    // in int main am facut o marca care sa claxoneze si sa porneasca
 }
