@@ -6,7 +6,7 @@
 class Vehicul
 {
 public:
-    Vehicul()
+    Vehicul(int nr_roti) : numar_roti(nr_roti)
     {
         std::cout << "Un vehicula fost creat\n";
     }
@@ -19,18 +19,24 @@ public:
     {
         std::cout << "Vehiculul a pornit " << std::endl;
     }
-protected:
+private:
     int numar_roti;
+   
+protected:
+    int getNumarRoti()
+    {
+        return numar_roti;
+    }
 };
 
 //class Derivata: tip_mostenire clasa_de_baza
 class Automobil : public Vehicul
 {
 public:
-    Automobil()
+    Automobil() : Vehicul(4)
     {
         std::cout << "Un automobil a fost creat\n";
-        numar_roti = 4;
+  
     }
     ~Automobil()
     {
@@ -42,7 +48,7 @@ public:
     }
     void printNumarRoti()
     {
-        std::cout << "Numarul de roti este " << numar_roti << std::endl;
+        std::cout << "Numarul de roti este " << getNumarRoti << std::endl;
     }
 };
 
@@ -53,6 +59,7 @@ int main()
     bmw.marca = "Bmw";//atribut din clasa vehicul
     bmw.porneste();//metoda din clasa vehicul
     bmw.claxoneaza();//metoda din clasa automobil
+    bmw.printNumarRoti();
     //bmw.numar_roti // error este protected
     //Vehicul v;
     //v.numar_roti // error este protected
