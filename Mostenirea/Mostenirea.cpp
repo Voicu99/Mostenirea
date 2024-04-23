@@ -51,7 +51,18 @@ public:
         std::cout << "Numarul de roti este " << getNumarRoti() << std::endl;
     }
 };
-
+class Motocicleta : public Vehicul
+{
+public:
+    Motocicleta() : Vehicul(2)
+    {
+        std::cout << "O mototcicleta a fost creata\n";
+    };
+    void lineSpliting()
+    {
+        std::cout << "Line Spliting\n";
+    }
+};
 
 int main()
 {
@@ -60,6 +71,10 @@ int main()
     bmw.porneste();//metoda din clasa vehicul
     bmw.claxoneaza();//metoda din clasa automobil
     bmw.printNumarRoti();
+    Motocicleta Bmw;
+    Bmw.marca = "Bmw";
+    Bmw.lineSpliting();
+
     //bmw.numar_roti // error este protected
     //Vehicul v;
     //v.numar_roti // error este protected
