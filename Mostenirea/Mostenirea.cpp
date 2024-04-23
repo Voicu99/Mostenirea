@@ -30,5 +30,5 @@ int main()
     bmw.marca = "Bmw";//atribut din clasa vehicul
     bmw.porneste();//metoda din clasa vehicul
     bmw.claxoneaza();//metoda din clasa automobil
-  
+   // in int main am facut o marca care sa claxoneze si sa porneasca
 }
