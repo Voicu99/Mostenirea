@@ -48,7 +48,7 @@ public:
     }
     void printNumarRoti()
     {
-        std::cout << "Numarul de roti este " << getNumarRoti << std::endl;
+        std::cout << "Numarul de roti este " << getNumarRoti() << std::endl;
     }
 };
 
